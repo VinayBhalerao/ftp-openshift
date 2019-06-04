@@ -7,5 +7,5 @@ ENV FTP_USER_HOME /home/bob
 ENV PUBLICHOST localhost
 
 EXPOSE 21 30000-30009
-RUN chmod u+x /run.sh
+RUN chmod 777 /run.sh
 CMD /run.sh -c 30 -C 10 -l puredb:/etc/pure-ftpd/pureftpd.pdb -E -j -R -P $PUBLICHOST -p 30000:30059
